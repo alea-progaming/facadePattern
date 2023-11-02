@@ -1,11 +1,12 @@
 public class Valet implements HotelService{
     private HotelService hotelService;
-    
-    public Valet(HotelService hotelService) {
-        this.hotelService = hotelService;
+    @Override
+    public void provideService() {
+        pickUpVehicle("AUS873");
     }
 
-    public void pickUpVehicle(String plateNummber) {
-        Vehicle vehicle = hotelService.pickUpVehicle(plateNummber);
+    public void pickUpVehicle(String plateNumber) {
+        System.out.println("Pick up for valet service. Plate number: " + plateNumber);
     }
+
 }   

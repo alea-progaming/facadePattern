@@ -1,8 +1,18 @@
-import HotelApp;
 public class FrontDesk {
-    private HotelApp hotel;
+    private HotelService valetService = new Valet();
+    private HotelService houseKeepingService = new HouseKeeping();
 
-    public FrontDesk(Hotel hotel) {
-        this.hotel = hotel;
+    private HotelService cartService = new Cart();
+
+    public void provideValetService() {
+        valetService.provideService();
+    }
+
+    public void provideHouseKeepingService() {
+        houseKeepingService.provideService();
+    }
+
+    public void provideCartService() {
+        cartService.provideService();
     }
 }
