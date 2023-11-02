@@ -1,7 +1,6 @@
 public class FrontDesk {
     private HotelService valetService = new Valet();
     private HotelService houseKeepingService = new HouseKeeping();
-
     private HotelService cartService = new Cart();
 
     public void provideValetService() {
